@@ -3,12 +3,24 @@ a.light {
 }
 
 body{
-	height: 100%;
     	margin: 0;
     	font-family: Trebuchet MS;
-    	color: #000;
 	display: block;
+	color: #000000;
 }
+
+.overlay{
+   /* opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+*/
+	height: 100vh;
+    }
 
 #header-wrap{
 	height: 48px;
@@ -27,7 +39,7 @@ body{
 #header {
     overflow: hidden;
     transition: 0.4s ease;
-    background-color: transparent;
+    background-color: black;
 }
 
 #header .inner {
@@ -57,19 +69,25 @@ body{
     	position: absolute;
 }
 
-#about{
+.headings{
 
-	font-size: 20px;
 	text-align: center;
+        letter-spacing: 0.45vw;
+        text-transform: uppercase;
+        font: 24px "Roboto Slab", sans-serif;
+        color: #000;
+        text-align: center;
+
 }
 
-h2{
-	letter-spacing: 0.45vw;
-    	text-transform: uppercase;
-    	font: 20px "Roboto Slab", sans-serif;
-    	color: #000;
-    	text-align: center;
+#home{
+
+        background-image: url('images/bg3.jpg');
+        background-repeat: no-repeat;           # to stop repeat if image is small
+        background-attachment: fixed;
+        background-size: cover;            # for covering whole image
 }
+
 
 .content{
     text-align: center;
@@ -79,12 +97,21 @@ h2{
     padding: 50px 0;
 }
 
-/* for image of self */
 .content p{
 	display: block;
     	margin-block-start: 1em;
     	margin-block-end: 1em;
     	margin-inline-start: 0px;
     	margin-inline-end: 0px;
-	font-size: 17px;
+	font-size: 18px;
+}
+/* Display Picture */
+#self{
+	 display: block;
+  	margin-left: 20px;
+  	margin-right: 20px;
+  	width: 15vw;
+ 	height: 35vh; 
+	float: right;
+	border-radius: 25%;
 }
