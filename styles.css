@@ -10,40 +10,43 @@ body{
     }
 
 #header-wrap{
-	height: 48px;
+	height: 56px;
 	width: 100%;
     	position: fixed;
 	z-index: 201;
 }
 
 #header {
+	height: 56px;
     width: 100%;
     position: absolute;
     bottom: 0;
     z-index:201;
     overflow: hidden;
     transition: 0.4s ease;
-    background-color: black;
+    background-color: #222222;
 }
 
 #header .inner {
     float:right;
 }
 
+/*
 .inner a.light {
     color: cyan;
 }
-.
+*/
 #header a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: black;
+    color: white;
+    height:56px;
 }
 
 #header a, #headname{
 	letter-spacing: 1px;
     	float: left;
     	display: block;
-    	color: #a0a0a0;
+    	color: #c0c0c0;
     	text-align: center;
     	padding: 14px 16px;
     	text-decoration: none;
@@ -71,9 +74,9 @@ body{
 #home{
 
         background-image: url('images/bg3.jpg');
-        background-repeat: no-repeat;           # to stop repeat if image is small
+        background-repeat: no-repeat;          /* to stop repeat if image is small*/
         background-attachment: fixed;
-        background-size: cover;            # for covering whole image
+        background-size: cover;           /* for covering whole image*/
 }
 
 /* !! sort this out */ 
@@ -116,8 +119,8 @@ body{
 	 display: block;
   	margin-left: 20px;
   	margin-right: 20px;
-  	width: 20vw;
- 	height: 50vh; 
+  	width: 16vw;
+ 	height: 45vh; 
 	float: right;
 	border-radius: 25%;
 }
