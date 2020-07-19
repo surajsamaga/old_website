@@ -1,89 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- Title -->
+        <title> Suraj Samaga </title>
+</head>
 
-	<head>
-		
-		<link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- Title -->
-		<title> About Me </title>
-	</head>
+<body>
 
-	<body>
-		
-			<!-- Navigation Pane -->
-		<div id="header-wrap">
-		<!-- container panel -->
-			<div id="header" class="topnav">	
-				<!-- another container, with some elements to the left, some to the right -->
-				<div class="inner">
-					<!-- main inner container (right aligned) -->
-					
-					<a href="#home" class="link upper" id="homelink">Home</a>
-					<a href="#about" class="link upper">About Me</a>
-					<a href="#activities" class="link upper">Activities</a>
-					<a href="#contact" class="link upper">Contact</a>
-					<a target="_blank" href="" class="upper">Resume</a>
-			
-				</div>
-				<!-- inner container (left aligned) -->
-			<div id="headname">SURAJ SAMAGA</div>
-			</div>
+	<nav>
+		<div class = "logo">
+			<h4> SURAJ SAMAGA </h4>
 		</div>
-		<br>
-		<br>
-		<!-- Home Page -->
-		<div id="home" class="overlay" style="text-align:center;"> 
-			<br><br>
-			<h2 class="headings"> HOME </h2>
-			<!-- !! sort this out --> 
-			<span class="caption"> Student | Swimmer | Friend </span>
+		<ul class="nav-content">
+			<li>
+				<!-- quick fix <br> -->
+				<a href="#Home"><br>Home</a>
+			</li>
+                        <li>
+				<a href="#About"><br>About</a>
+			</li>
+                        <li>
+				<a href="#Activities"><br>Activities</a>
+			</li>
+                        <li>
+				<a href="#Resume"><br>Resume</a>
+			</li>
+                        <li>
+				<a href="#Contact"><br>Contact</a>
+			</li>
+		</ul>
+			<!-- for mobile devices -->
+		<div class="burger">
+			<div class = "line1"></div>
+                        <div class = "line2"></div>
+                        <div class = "line3"></div>
 		</div>
-		<!-- About-->
-		<div id="about" class="overlay">
-			<div class="content">
-				<h2 class="headings"> ABOUT ME </h2>
-				<!-- Heading -->	
-				<hr>
-				<br>
-				
-				<table id=info>
-					<tr>
-						<td style="width:65%">
-							<p style= "font-family:Roboto ; font-size: 26px;" ><b> Hey there! I am Suraj Samaga! </b></p> 
-							<p class="paras"> I am a Sophomore of the <strong>Chemical Engineering Department</strong> in the Indian Institute of Technology, Bombay.
-							<br> I am an enthusiastic, self-driven individual with a thirst to make a difference.  
-							I believe that process of learning is eternal, and love to discover new technologies, subjects or ideas. 
-							</p>
-							<h3 class="para_headings"> Interests </h3>
-							<p class="paras">	I love coding, and <strong>problem solving</strong> in general. The thrill of imagining something in your head and realizing it straight with your hands is something that I cherish.
-						<br> Math is another topic that I am very passionate about, for its elegance and very diverse applications. In particular, I find Calculus and Linear Algebra extremely interesting.   
-						<br> Recently, I dabbled into the field of <strong>Deep Learning</strong>, and the experience was amazing. Have a look at some of my projects <a href="#activities">here</a>. 
-							</p>
-							<h3 class="para_headings"> Hobbies </h3>
-							<p class="paras">
-							Being a part of the Aquatics team of IIT Bombay, I swim almost everyday of the week. Swimming is the most complete form of exercise out there, and apart from the obvious physical benefits, I believe it also helps me focus better. <br>I am also a Manchester United fan (GGMU) and love playing and watching football.
-				<br>
-				Meditation is a part of my daily routine, as I believe that mastering our thoughts and emotions is the key to leading a happy life.
-						
-							</p>
-						</td>
-						<td style="width:35%";>
-							<img id="self" src="images/self.jpg" alt="Display Picture">
+	</nav>
 
-						</td>
-					</tr>
-				</table>
-			</div>
+	<!-- Home page -->
+	<div id="Home" class="overlay">
+		<div class="headings">
+		<h2> Home </h2>
 		</div>
-	<div id="activities" class="overlay">
-		<div class="content">
-			<h2 class="headings"> ACTIVITIES </h2>
-			<!-- Heading -->	
-			<hr>
+       		<div class="quote">
+		<p> It matters not where you start, but where you finish </p>
+		</div>
+	</div>
+
+	<div id="About" class="overlay">
+		<div class="content-container">
 
 		</div>
 	</div>
-	</body>	
+	<div id="Contact" class="overlay">
+		<div class="headings">
+			<br>
+			<h2> Contact </h2>
+		</div>
+		<div class="form-container">
+			<form action="https://formspree.io/xqkyggpd" method="POST">
+				<ul class="flexform">
+					<li>
+						<label for="name">
+							Name:
+						</label>
+						<input type="text" id="name" placeholder="Your name">
+					</li>
+					<li>
+						<label for="email">
+							Email:
+						</label>
+						<input type="text" id="email" name="_replyto" placeholder="Your email">
+					</li>
+					<li>
+						<label for="message">
+    							Message:
+  						</label>
+						<textarea name="Your message"></textarea>
+					</li>
+					<li>
+						<button type="submit">Submit</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	<!-- My Timetable -->
+	<div class="timetable">
+		<table class="tablecontent">
+			<caption> My Timetable </caption>
+			<thead>
+				<tr>
+					<th class="corner">Time/Day</th>
+					<th class="t-head">8:30-9:25</th>
+					<th class="t-head">9:30-10:25</th>
+					<th class="t-head" colspan="2">10:35-11:30</th>
+					<th class="t-head">11:35-12:30</th>
+					<th class="lunch" rowspan="6">Lunch</th>
+					<th class="t-head" colspan="2">14:00-15:25</th>
+					<th class="t-head" colspan="2">15:30-16:55</th>
+					<th class="t-head">17:30-18:55</th>
+					<th class="t-head">19:00-20:25</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+
+	</div>
+
+<script src="appl.js"></script>
+</body>
 </html>

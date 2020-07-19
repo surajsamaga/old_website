@@ -1,126 +1,269 @@
-body{
-    	margin: 0;
-    	font-family: Trebuchet MS;
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/* Navigation Bar */
+
+/* nav container */
+nav{
+	position:fixed;
+	top:0;
+	width:100%;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 6vh;
+	background-color: rgb(50,50,50);
+	font-family: "Helvetica" sans-serif;
+}
+/* name container */
+.logo{
+	color: rgb(205,205,205);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 20px;
+}
+/* nav items <ul> */
+.nav-content{
+	display:flex;
+	width: 35%;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	list-style: none;
+	align-self: stretch;
+}
+
+.nav-content li{
+	list-style: none;
+	display:flex;
+	align-items: stretch;
+}
+
+.nav-content a{
+	color: rgb(205,205,205);
+	text-decoration: none;
+	letter-spacing: 2.5px;
+	font-weight: bold;
+	font-size: 18px;
 	display: block;
-	color: #000000;
+	text-align:center;
+}
+.nav-content li:hover{
+	background-color: black;
 }
 
-.overlay{
+/* burger for toggling nav bar */
+.burger{
+	display: none;
+}
+
+.burger div{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(205,205,205);
+	margin: 5px;
+	transition all: 0.3s ease;
+}
+
+/* small hack */
+@media screen and (max-width: 1200px){
+	.nav-content{
+		width: 50%;
+	}
+}
+/* for mobile devices */
+@media screen and (max-width: 768px){
+	body{
+		overflow-x: hidden;
+	}
+	.nav-content{
+		position: absolute;
+		right: 0px;
+		height:92vh;
+		top: 6vh;
+		background-color: rgb(50,50,50);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-self:stretch;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in; 
+	}
+	.nav-content li{
+		opacity: 0;
+	}
+	.burger{
+		display: block;
+		cursor: pointer;
+	}
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+/* animation for nav-items in mobile devices */
+@keyframes navFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+/* animation for burger on click */
+.clickburger .line1{
+	transform: rotate(-45deg) translate (-5px, 6px);
+}
+
+.clickburger .line2{
+	opacity:0;
+}
+.clickburger .line3{
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Main css */
+
+/* Timetable */
+.timetable table, th, td{
+	border:1px solid black;
+	border-collapse:collapse;
+}
+.timetable th{
+	text-align:center;
+}
+.timetable th, td{
+	padding:15px;
+}
+.tablecontent{
+	margin-left: auto;
+  	margin-right: auto;
+}
+.tablecontent caption{
+	font-family: Roboto;
+	font-size: 20px;
+	letter-spacing:2px;
+	text-transform: uppercase;
+}
+
+/* Home */
+#Home{
+	margin-top:6vh;
+	background-image: url("images/bg1.jpg");
 	height: 100vh;
-    }
-
-#header-wrap{
-	height: 56px;
-	width: 100%;
-    	position: fixed;
-	z-index: 201;
-}
-
-#header {
-	height: 56px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    z-index:201;
-    overflow: hidden;
-    transition: 0.4s ease;
-    background-color: #222222;
-}
-
-#header .inner {
-    float:right;
-}
-
-/*
-.inner a.light {
-    color: cyan;
-}
-*/
-#header a:hover {
-    background-color: black;
-    color: white;
-    height:56px;
-}
-
-#header a, #headname{
-	letter-spacing: 1px;
-    	float: left;
-    	display: block;
-    	color: #c0c0c0;
-    	text-align: center;
-    	padding: 14px 16px;
-    	text-decoration: none;
-    	font-size: 17px;
-}
-
-#headname {
-	letter-spacing: 2px;
-    	font-family: 'Julius Sans One', sans-serif;
-    	font-size: 15pt;
-    	position: absolute;
-}
-
-.headings{
-
-	text-align: center;
-        letter-spacing: 0.45vw;
-        text-transform: uppercase;
-        font: 30px "Roboto Slab", sans-serif;
-        color: #000;
-        text-align: center;
-
-}
-
-#home{
-
-        background-image: url('images/bg3.jpg');
         background-repeat: no-repeat;          /* to stop repeat if image is small*/
         background-attachment: fixed;
         background-size: cover;           /* for covering whole image*/
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:center
 }
 
-/* !! sort this out */ 
-.caption{
-	background-color: #111;
-    	color: #fff;
-    	padding: 18px;
-    	font-size: 40px;
-	position: absolute;
-    	top: 43%;
-	left: 40%;
-	display: inline-block;
+.headings h2{
+        text-align: center;
+        letter-spacing: 0.45vw;
+        text-transform: uppercase;
+        font: 35px "Roboto Slab", sans-serif;
+        color: #000;
+        text-align: center;
+}
+.quote{
+	height: 10em;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	opacity:0.75;
+}
+.quote p{
+	margin:0;
+	font-family: Roboto;
+	font-size: 45px;
+	text-align: center;
 }
 
-.content{
-    text-align: center;
-    width: 66%;
-    margin-left: 17%;
-    text-align: justify;
-    padding: 50px 0;
+/* About */
+#About{
+	height:100vh;
+}
+.content-container{
+	display:flex;
+		
 }
 
-.para_headings{
-	letter-spacing: 0.25vw;
-	text-transform:uppercase;
-	font : "Roboto Slab";
-	color: gray;
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Contact form */
+
+#Contact{
+	background:blue;
 }
-.paras{
-	display: block;
-    	margin-block-start: 1em;
-    	margin-block-end: 1em;
-    	margin-inline-start: 0px;
-    	margin-inline-end: 0px;
-	line-height: 1.3;
-	font-size: 18px;
+
+#Contact p{
+	font-family:	
 }
-/* Display Picture */
-#self{
-	 display: block;
-  	margin-left: 20px;
-  	margin-right: 20px;
-  	width: 16vw;
- 	height: 45vh; 
-	float: right;
-	border-radius: 25%;
+
+.form-container{
+  	width: 80%;
+  	max-width: 1200px;
+  	margin: 0 auto;
+	border-radius: 5px;
+  	padding: 20px;
 }
+.form-container *{
+	box-sizing:border-box;
+}
+
+.flexform{
+  	list-style-type: none;
+  	padding: 0;
+	max-width: 800px;
+  	margin: 0 auto;
+}
+.flexform li{
+	display: flex;
+  	flex-wrap: wrap;
+  	align-items: center;
+}
+
+.flexform > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flexform li label{
+	padding: 20px;
+  	font-weight: 300;
+  	letter-spacing: .09em;
+  	text-transform: uppercase;
+}
+.flexform > li > label{
+	flex: 1 0 120px;
+  	max-width: 220px;
+}
+.flexform > li > label + *{
+	flex: 1 0 220px;
+}
+.flexform li input, .flexform li textarea{
+	padding: 15px;
+  	border: none;
+}
+
+.flexform li button {
+  	margin-left: auto;
+  	padding: 8px 16px;
+  	border: none;
+  	background: #333;
+  	color: #f2f2f2;
+  	text-transform: uppercase;
+  	letter-spacing: .09em;
+  	border-radius: 2px;
+	cursor:pointer;
+} 
+
