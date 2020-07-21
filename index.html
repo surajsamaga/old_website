@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
-
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Title -->
         <title> Suraj Samaga </title>
 </head>
@@ -13,7 +15,7 @@
 
 	<nav>
 		<div class = "logo">
-			<h4> SURAJ SAMAGA </h4>
+			<h3> SURAJ SAMAGA </h3>
 		</div>
 		<ul class="nav-content">
 			<li>
@@ -40,25 +42,126 @@
                         <div class = "line3"></div>
 		</div>
 	</nav>
+	<!-- go back to top button -->
+
+	<button onclick="topfunction()" id="topbtn" title="Go back up">
+		<i class="material-icons">arrow_upward</i>
+	</button>
 
 	<!-- Home page -->
 	<div id="Home" class="overlay">
 		<div class="headings">
-		<h2> Home </h2>
+		<h2> WELCOME TO MY WEBSITE! </h2>
 		</div>
        		<div class="quote">
 		<p> It matters not where you start, but where you finish </p>
 		</div>
 	</div>
+	<!-- ADD BUTTON -->
 
 	<div id="About" class="overlay">
 		<div class="content-container">
+			<div class="headings">
+                		<h2> About </h2>
+                	</div>
+
+			<div class="content-child"> 
+				<h3>Hey there!</h3>
+				<p>
+				I am a Sophomore at the Department of __________ Engineering at the Indian Insitute of Technology, Bombay.
+				<br>
+				I am an enthusiastic, self-driven individual with an insatiable appetite for knowledge, and chocolate!
+				I believe that process of learning is eternal, and love to explore new technologies and ideas.
+				<br>
+				</p>
+			</div>
+			<div class="content-child">
+				<h3> Interests </h3>
+				<p>
+				I love coding, and problem solving in general. The thrill of imagining something in your head and realizing it straight with your hands is something that I cherish.
+				Academically, math is my favourite subject, for its elegance and very diverse applications. In particular, I find Calculus very stimulating.
+				I recently dabbled into the field of Deep Learning, and the experience was amazing. Have a look at some of my projects <a href="#Activities">here</a>.
+				<br>
+				</p>
+			</div>
+			<div class="content-child">
+				<!-- add swimming, cycling + video, meditation, reading -->
+				<h3> Hobbies </h3>
+				<p>
+				Being a part of the Aquatics team of IIT Bombay, I swim almost everyday of the week. The obvious physical benefits aside, I believe it also helps me focus better. 
+				Another sport I am quite passionate about is football. I am a Manchester United fan (GGMU!) and make it a point to catch most of their games.
+				<br> I am also an avid cyclist, and a recognized randonneur, a title assumed by someone who has completed a cycle ride of 200km or more (on a stretch).
+				<br>
+				Here is a cycling video from my trip to the hilly town of Chikmagalur, Karnataka:
+				</p>
+			</div>
+			<div class="content-child" id="video-container">
+				<div class="iframe-container">
+				<iframe width="600" height="400" src="https://www.youtube.com/embed/3KuL-DIN5J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				</iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- ################################################################ -->
+	<div id="Activities" class="overlay">
+		<div class="content-container" id="content-activities">
+			<div class="headings">
+                		<h2> Activities </h2>
+                	</div>
+
+			<div class="content-child">
+				<h3> Mars Rover Team </h3>
+				<p>
+				I am a member of the Electrical and Software Subsystem in the Mars Rover Team. The objective of the team is to design a Rover capable of investigating and navigating terrains like that of Mars. Head over to <a href="https://iitbmartian.github.io/">Mars Rover Team IIT Bombay</a> for insight on the cool things we do!
+				</p>
+			</div>
+
+			<div class="content-child">
+				<h3> Reading Text from the Wild </h3>
+				<p>
+				I undertook this project as part of the Seasons of Code initiative by the Web and Coding Club, IIT Bombay. The objective was to develop a CNN based OCR to detect and recognize text from images taken in the wild. I worked on the Google SVT Dataset, and used the YOLOv2 algorithm for text detection, and a custom designed CNN for text recognition. Find the implementation details in this <a href="https://github.com/surajsamaga/SoC-20-Un-structured">github repo</a>.
+				</p>
+			</div>
+			
+			<div class="content-child">
+				<h3> Learners' Space- Web Development </h3>
+				<p>
+				This website has been developed as part of this course, where I have explored the different facets of web-development. Find more about the course <a href="https://github.com/wncc/learners-space/tree/master/Web%20Development">here</a>.
+				</p>
+			</div>
 
 		</div>
 	</div>
+
+	<!-- My Timetable -->
+	<div class="timetable">
+		<table class="tablecontent">
+			<caption> My Timetable </caption>
+			<thead>
+				<tr>
+					<th class="corner">Time/Day</th>
+					<th class="t-head">8:30-9:25</th>
+					<th class="t-head">9:30-10:25</th>
+					<th class="t-head" colspan="2">10:35-11:30</th>
+					<th class="t-head">11:35-12:30</th>
+					<th class="lunch" rowspan="6">Lunch</th>
+					<th class="t-head" colspan="2">14:00-15:25</th>
+					<th class="t-head" colspan="2">15:30-16:55</th>
+					<th class="t-head">17:30-18:55</th>
+					<th class="t-head">19:00-20:25</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- ############################################################### -->
+
 	<div id="Contact" class="overlay">
 		<div class="headings">
-			<br>
 			<h2> Contact </h2>
 		</div>
 		<div class="form-container">
@@ -89,30 +192,6 @@
 			</form>
 		</div>
 	</div>
-	<!-- My Timetable -->
-	<div class="timetable">
-		<table class="tablecontent">
-			<caption> My Timetable </caption>
-			<thead>
-				<tr>
-					<th class="corner">Time/Day</th>
-					<th class="t-head">8:30-9:25</th>
-					<th class="t-head">9:30-10:25</th>
-					<th class="t-head" colspan="2">10:35-11:30</th>
-					<th class="t-head">11:35-12:30</th>
-					<th class="lunch" rowspan="6">Lunch</th>
-					<th class="t-head" colspan="2">14:00-15:25</th>
-					<th class="t-head" colspan="2">15:30-16:55</th>
-					<th class="t-head">17:30-18:55</th>
-					<th class="t-head">19:00-20:25</th>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
-
-	</div>
-
 <script src="appl.js"></script>
 </body>
 </html>

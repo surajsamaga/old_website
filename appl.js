@@ -21,4 +21,15 @@ const navSlide = () => {
 	});
 }
 
+function btnscroll(){
+	const btnscroll = document.querySelector("#topbtn");
+	btnscroll.addEventListener("click", function(){
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: "smooth"
+		});
+	});
+};
 navSlide();
+btnscroll();

@@ -3,7 +3,13 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
-
+body{
+	background:black;
+	color:white;
+}
+.overlay{
+	font-family:'Monsterrat';
+}
 /* Navigation Bar */
 
 /* nav container */
@@ -17,7 +23,7 @@ nav{
 	align-items: center;
 	min-height: 6vh;
 	background-color: rgb(50,50,50);
-	font-family: "Helvetica" sans-serif;
+	font-family: "Ubuntu";
 }
 /* name container */
 .logo{
@@ -40,6 +46,8 @@ nav{
 	list-style: none;
 	display:flex;
 	align-items: stretch;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 .nav-content a{
@@ -129,8 +137,28 @@ nav{
 .clickburger .line3{
 	transform: rotate(45deg) translate(-5px, -6px);
 }
-
 /* Main css */
+#topbtn{
+	position:fixed;
+	right:25px;
+	bottom:25px;
+	width:55px;
+	height:55px;
+	border-radius:50%;
+	cursor:pointer;
+	background:#e62739;
+	box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	color:#ffffff;
+	outline:none;
+	border:none;
+}
+
+#topbtn:hover{
+	background:#ff0000;
+}
+#topbtn:active{
+	background:#ae1e2c;
+}
 
 /* Timetable */
 .timetable table, th, td{
@@ -157,7 +185,7 @@ nav{
 /* Home */
 #Home{
 	margin-top:6vh;
-	background-image: url("images/bg1.jpg");
+	margin:auto;
 	height: 100vh;
         background-repeat: no-repeat;          /* to stop repeat if image is small*/
         background-attachment: fixed;
@@ -169,15 +197,17 @@ nav{
 }
 
 .headings h2{
+	font-weight:600;
+	color:white;
         text-align: center;
+	font-size:3em;
         letter-spacing: 0.45vw;
         text-transform: uppercase;
-        font: 35px "Roboto Slab", sans-serif;
-        color: #000;
+        font-family: 'Ubuntu';
         text-align: center;
 }
 .quote{
-	height: 10em;
+	height: 8em;
   	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -185,25 +215,46 @@ nav{
 }
 .quote p{
 	margin:0;
-	font-family: Roboto;
-	font-size: 45px;
+	font-family: 'Montserrat';
+	font-size: 2em;
 	text-align: center;
 }
 
 /* About */
 #About{
-	height:100vh;
 }
 .content-container{
+	min-height:120vh;
 	display:flex;
-		
+	flex-flow: column nowrap;
+	align-items:center;
+	justify-content:space-between;
+	width:80%;
+	margin:auto;
+}
+.content-child{
+	flex: 1 1 auto;
+}
+.content-child h3{
+	font-size:2em;
+	font-weight:500;
+	font-family: 'Ubuntu';
+	font-weight:550;
+	text-transform:uppercase;
+}
+.content-child p{
+	font-size:1.5em;
+	font-family:'Montserrat';
+	font-weight:400;
 }
 
+#content-activities{
+	min-height:80vh;
+}
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 /* Contact form */
 
 #Contact{
-	background:blue;
 }
 
 #Contact p{
