@@ -1,3 +1,4 @@
+// nav bar slider 
 const navSlide = () => {
 	const burger = document.querySelector('.burger');
 	const nav = document.querySelector('.nav-content');
@@ -21,6 +22,7 @@ const navSlide = () => {
 	});
 }
 
+// scroll to top button
 function btnscroll(){
 	const btnscroll = document.querySelector("#topbtn");
 	btnscroll.addEventListener("click", function(){
@@ -31,5 +33,8 @@ function btnscroll(){
 		});
 	});
 };
+
+// nav bar style change
+
 navSlide();
 btnscroll();

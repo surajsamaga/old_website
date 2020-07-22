@@ -3,10 +3,11 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="styles.css" media="screen">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Title -->
         <title> Suraj Samaga </title>
 </head>
@@ -28,8 +29,11 @@
                         <li>
 				<a href="#Activities"><br>Activities</a>
 			</li>
+			<li>
+				<a href="#timetable"><br>Timetable</a>
+			</li>
                         <li>
-				<a href="#Resume"><br>Resume</a>
+				<a target="_blank" href=""><br>Resume</a>
 			</li>
                         <li>
 				<a href="#Contact"><br>Contact</a>
@@ -44,7 +48,7 @@
 	</nav>
 	<!-- go back to top button -->
 
-	<button onclick="topfunction()" id="topbtn" title="Go back up">
+	<button id="topbtn" title="Go back up">
 		<i class="material-icons">arrow_upward</i>
 	</button>
 
@@ -54,7 +58,7 @@
 		<h2> WELCOME TO MY WEBSITE! </h2>
 		</div>
        		<div class="quote">
-		<p> It matters not where you start, but where you finish </p>
+			<p><i> It matters not where you start, but where you finish</i> </p>
 		</div>
 	</div>
 	<!-- ADD BUTTON -->
@@ -79,6 +83,7 @@
 				<h3> Interests </h3>
 				<p>
 				I love coding, and problem solving in general. The thrill of imagining something in your head and realizing it straight with your hands is something that I cherish.
+				<br>
 				Academically, math is my favourite subject, for its elegance and very diverse applications. In particular, I find Calculus very stimulating.
 				I recently dabbled into the field of Deep Learning, and the experience was amazing. Have a look at some of my projects <a href="#Activities">here</a>.
 				<br>
@@ -89,10 +94,11 @@
 				<h3> Hobbies </h3>
 				<p>
 				Being a part of the Aquatics team of IIT Bombay, I swim almost everyday of the week. The obvious physical benefits aside, I believe it also helps me focus better. 
-				Another sport I am quite passionate about is football. I am a Manchester United fan (GGMU!) and make it a point to catch most of their games.
-				<br> I am also an avid cyclist, and a recognized randonneur, a title assumed by someone who has completed a cycle ride of 200km or more (on a stretch).
+				Another sport I am quite passionate about is football. I am a <span class="utd">Manchester United</span> fan (GGMU!) and make it a point to catch most of their games.
+				<br> I am also an avid cyclist, and a recognized <a href="https://en.wikipedia.org/wiki/Randonneuring">randonneur</a>, a title assumed by someone who has completed a cycle ride of 200km or more (at a stretch).
 				<br>
-				Here is a cycling video from my trip to the hilly town of Chikmagalur, Karnataka:
+				<br>
+				Here is a video on my cycling tour of the hilly town of Chikmagalur, Karnataka with my dad, captured from our cycles:
 				</p>
 			</div>
 			<div class="content-child" id="video-container">
@@ -128,7 +134,7 @@
 			<div class="content-child">
 				<h3> Learners' Space- Web Development </h3>
 				<p>
-				This website has been developed as part of this course, where I have explored the different facets of web-development. Find more about the course <a href="https://github.com/wncc/learners-space/tree/master/Web%20Development">here</a>.
+				This website has been developed as a part of this course, where I have explored the different facets of web-development. Find more about the course <a href="https://github.com/wncc/learners-space/tree/master/Web%20Development">here</a>.
 				</p>
 			</div>
 
@@ -136,25 +142,77 @@
 	</div>
 
 	<!-- My Timetable -->
-	<div class="timetable">
+	<div id="timetable" class="overlay">
+		<div class="headings">
+			<h2> My Timetable </h2>
+		</div>
+		<div class="content-child">
+			<p> Here is what a typical day in my life at college looks like:</p>
+			<br>
+		</div>
 		<table class="tablecontent">
-			<caption> My Timetable </caption>
-			<thead>
-				<tr>
-					<th class="corner">Time/Day</th>
-					<th class="t-head">8:30-9:25</th>
-					<th class="t-head">9:30-10:25</th>
-					<th class="t-head" colspan="2">10:35-11:30</th>
-					<th class="t-head">11:35-12:30</th>
-					<th class="lunch" rowspan="6">Lunch</th>
-					<th class="t-head" colspan="2">14:00-15:25</th>
-					<th class="t-head" colspan="2">15:30-16:55</th>
-					<th class="t-head">17:30-18:55</th>
-					<th class="t-head">19:00-20:25</th>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
+			<tr>
+				<th id="corner">Time/Day</th>
+				<th class="t-head">8:30-9:25</th>
+				<th class="t-head">9:30-10:25</th>
+				<th class="t-head" colspan="2">10:35-11:30</th>
+				<th class="t-head">11:35-12:30</th>
+				<th rowspan="6" class="break">Lunch</th>
+				<th class="t-head" colspan="2">14:00-15:25</th>
+				<th class="t-head" colspan="2">15:30-16:55</th>
+				<th class="break" rowspan="6">Tea</th>
+				<th class="t-head">17:30-18:55</th>
+				<th class="t-head">19:00-20:25</th>
+			</tr>
+			<tr>
+				<th class="lhs">Monday</th>
+				<td title="">HS200</td>
+				<td title=""></td>
+				<td colspan="2" title=""></td>
+				<td title=""></td>
+				<td colspan="4" title=""></td>
+				<td title=""></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th class="lhs">Tuesday</th>
+				<td title=""></td>
+				<td title="">HS200</td>
+				<td colspan="2" title=""></td>
+				<td title=""></td>
+				<td colspan="4" title=""></td>
+				<td title=""></td>
+				<td title=""></td>
+			</tr>
+			<tr>
+				<th class="lhs">Wednesday</th>
+				<td title=""></td>
+				<td colspan="2" title=""></td>
+				<td colspan="2" title=""></td>
+				<td colspan="4" title=""></td>
+				<td title=""></td>
+				<td title=""></td>
+			</tr>
+			<tr>
+				<th class="lhs">Thursday</th>
+				<td title=""></td>
+				<td title=""></td>
+				<td colspan="2" title="">HS200</td>
+				<td title=""></td>
+				<td colspan="4" title=""></td>
+				<td title=""></td>
+				<td title=""></td>
+			</tr>
+			<tr>
+				<th class="lhs">Friday</th>
+				<td title=""></td>
+				<td colspan="2" title=""></td>
+				<td colspan="2" title=""></td>
+				<td colspan="4" title=""></td>
+				<td title=""></td>
+				<td title=""></td>
+			</tr>
+
 		</table>
 	</div>
 
@@ -183,13 +241,25 @@
 						<label for="message">
     							Message:
   						</label>
-						<textarea name="Your message"></textarea>
+						<textarea name="Your message" placeholder="Your Message"></textarea>
 					</li>
 					<li>
 						<button type="submit">Submit</button>
 					</li>
 				</ul>
 			</form>
+		</div>
+		<div class="content-child">
+			<p> If you want to know more about me, contact me over these platforms. Looking forward to meeting with you!</p>
+			<br>
+		</div>
+		<div class="icon-container">
+			<ul>
+				<li><a target="_blank" href="https://github.com/surajsamaga"><i class="fa fa-github"></i></a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/in/suraj-samaga-372794191/"><i class="fa fa-linkedin"></i></a></li>
+				<li><a target="_blank" href="https://www.facebook.com/suraj.samaga.1/"><i class="fa fa-facebook"></i></a></li>
+				<li><a target="_blank" href="https://www.instagram.com/__surajsamaga__/"><i class="fa fa-instagram"></i></a></li>
+			</ul>
 		</div>
 	</div>
 <script src="appl.js"></script>

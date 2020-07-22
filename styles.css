@@ -1,3 +1,4 @@
+
 *{
 	margin: 0px;
 	padding: 0px;
@@ -6,10 +7,13 @@
 body{
 	background:black;
 	color:white;
+	font-size:16px;
 }
 .overlay{
-	font-family:'Monsterrat';
-}
+	font-family:'Montserrat';
+	padding-top:1em;
+	padding-bottom-1em;
+	}
 /* Navigation Bar */
 
 /* nav container */
@@ -18,70 +22,71 @@ nav{
 	top:0;
 	width:100%;
 	display: flex;
-	flex-flow: row;
+	flex-flow: row nowrap;
 	justify-content: space-around;
-	align-items: center;
 	min-height: 6vh;
-	background-color: rgb(50,50,50);
+	background-color: rgb(225,225,225);
 	font-family: "Ubuntu";
 }
 /* name container */
 .logo{
-	color: rgb(205,205,205);
+	color: rgb(50,50,50);
 	text-transform: uppercase;
-	letter-spacing: 4px;
-	font-size: 20px;
+	letter-spacing: 0.25em;
+	font-size: 1.25em;
 }
 /* nav items <ul> */
 .nav-content{
 	display:flex;
-	width: 35%;
+	width: 50%;
 	justify-content: space-around;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	list-style: none;
-	align-self: stretch;
 }
 
 .nav-content li{
 	list-style: none;
+	align-self:stretch;
 	display:flex;
 	align-items: stretch;
-	padding-left: 3px;
-	padding-right: 3px;
 }
 
 .nav-content a{
-	color: rgb(205,205,205);
+	color: rgb(50,50,50);
 	text-decoration: none;
-	letter-spacing: 2.5px;
+	letter-spacing: 0.15625em;
 	font-weight: bold;
-	font-size: 18px;
 	display: block;
 	text-align:center;
+	text-transform:uppercase;
+	transition: all 0.3s ease-in-out;
 }
-.nav-content li:hover{
-	background-color: black;
+.nav-content li a:hover{
+	color: red;
+	font-weight:800;
 }
 
 /* burger for toggling nav bar */
 .burger{
 	display: none;
+	align-self:center;
 }
 
 .burger div{
-	width: 25px;
-	height: 3px;
-	background-color: rgb(205,205,205);
-	margin: 5px;
+	width: 1.5625em;
+	height: 0.1875em;
+	background-color: rgb(50,50,50);
+	margin: 0.3125em;
 	transition all: 0.3s ease;
 }
 
 /* small hack */
 @media screen and (max-width: 1200px){
 	.nav-content{
-		width: 50%;
+		width: 70%;
 	}
 }
+
 /* for mobile devices */
 @media screen and (max-width: 768px){
 	body{
@@ -92,12 +97,12 @@ nav{
 		right: 0px;
 		height:92vh;
 		top: 6vh;
-		background-color: rgb(50,50,50);
+		background-color: rgb(225,225,225);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		align-self:stretch;
-		width: 50%;
+		width: 35%;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in; 
 	}
@@ -118,7 +123,7 @@ nav{
 @keyframes navFade{
 	from{
 		opacity: 0;
-		transform: translateX(50px);
+		transform: translateX(3.125em);
 	}
 	to{
 		opacity: 1;
@@ -128,14 +133,15 @@ nav{
 
 /* animation for burger on click */
 .clickburger .line1{
-	transform: rotate(-45deg) translate (-5px, 6px);
+	transform: rotate(-45deg) translate (-0.3125em, 0.375em);
+	opacity:0;
 }
 
 .clickburger .line2{
-	opacity:0;
+	transform: rotate(-45deg);
 }
 .clickburger .line3{
-	transform: rotate(45deg) translate(-5px, -6px);
+	transform: rotate(45deg) translate(-0.3125em, -0.375em);
 }
 /* Main css */
 #topbtn{
@@ -161,25 +167,38 @@ nav{
 }
 
 /* Timetable */
-.timetable table, th, td{
-	border:1px solid black;
-	border-collapse:collapse;
+#timetable{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content:space-between;
+	align-items:center;
 }
-.timetable th{
+#timetable th{
 	text-align:center;
 }
-.timetable th, td{
+#timetable th, td{
 	padding:15px;
 }
 .tablecontent{
 	margin-left: auto;
   	margin-right: auto;
+	width:75%;
 }
-.tablecontent caption{
-	font-family: Roboto;
-	font-size: 20px;
-	letter-spacing:2px;
-	text-transform: uppercase;
+.break{
+	vertical-align:top;
+}
+.t-head, .lhs{
+	background:#008080;
+}
+.break, #corner{
+	background:#004040;
+}
+.tablecontent td{
+}
+#timetable table, th, td{
+	border:1px solid white;
+	border-collapse:collapse;
+	text-align:center;
 }
 
 /* Home */
@@ -187,17 +206,14 @@ nav{
 	margin-top:6vh;
 	margin:auto;
 	height: 100vh;
-        background-repeat: no-repeat;          /* to stop repeat if image is small*/
-        background-attachment: fixed;
-        background-size: cover;           /* for covering whole image*/
 	display:flex;
-	flex-direction:column;
+	flex-flow:column wrap;
 	justify-content: center;
 	align-items:center
 }
 
 .headings h2{
-	font-weight:600;
+	font-weight:700;
 	color:white;
         text-align: center;
 	font-size:3em;
@@ -205,6 +221,8 @@ nav{
         text-transform: uppercase;
         font-family: 'Ubuntu';
         text-align: center;
+	padding-top:1em;
+	padding-bottom:1em;
 }
 .quote{
 	height: 8em;
@@ -216,7 +234,7 @@ nav{
 .quote p{
 	margin:0;
 	font-family: 'Montserrat';
-	font-size: 2em;
+	font-size: 2.125em;
 	text-align: center;
 }
 
@@ -226,7 +244,7 @@ nav{
 .content-container{
 	min-height:120vh;
 	display:flex;
-	flex-flow: column nowrap;
+	flex-flow: column wrap;
 	align-items:center;
 	justify-content:space-between;
 	width:80%;
@@ -234,6 +252,8 @@ nav{
 }
 .content-child{
 	flex: 1 1 auto;
+	padding-top:1em;
+	padding-bottom:1em;
 }
 .content-child h3{
 	font-size:2em;
@@ -247,25 +267,37 @@ nav{
 	font-family:'Montserrat';
 	font-weight:400;
 }
-
+.utd{
+	color:red;
+}
 #content-activities{
 	min-height:80vh;
+	display:flex;
+        flex-flow: column wrap;
+        align-items:center;
+        justify-content:space-between;
 }
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 /* Contact form */
 
 #Contact{
+	display:flex;
+	flex-flow:column wrap;
+	align-items:center;
+	justify-content:space-between;
+	align-content:center;
+	padding-bottom:2em;
 }
 
 #Contact p{
-	font-family:	
+	font-family:'Montserrat';
 }
 
 .form-container{
   	width: 80%;
   	max-width: 1200px;
-  	margin: 0 auto;
-	border-radius: 5px;
+  	margin:auto;
+	border-radius: 0.3125em;
   	padding: 20px;
 }
 .form-container *{
@@ -274,14 +306,16 @@ nav{
 
 .flexform{
   	list-style-type: none;
-  	padding: 0;
+  	padding: 0.75em;
 	max-width: 800px;
-  	margin: 0 auto;
+  	margin: auto;
 }
 .flexform li{
 	display: flex;
   	flex-wrap: wrap;
   	align-items: center;
+	align-content:center;
+	justify-content:space-between;
 }
 
 .flexform > li:not(:last-child) {
@@ -302,13 +336,15 @@ nav{
 	flex: 1 0 220px;
 }
 .flexform li input, .flexform li textarea{
-	padding: 15px;
+	padding: 1em;
   	border: none;
+	font-size:0.9375em;
+	font-family:'Montserrat';
 }
 
 .flexform li button {
   	margin-left: auto;
-  	padding: 8px 16px;
+  	padding: 1em 1em;
   	border: none;
   	background: #333;
   	color: #f2f2f2;
@@ -316,5 +352,68 @@ nav{
   	letter-spacing: .09em;
   	border-radius: 2px;
 	cursor:pointer;
-} 
+}
+.flexform li button:hover{
+	background:#f2f2f2;
+	color:#333;
+	transition: all 0.3s ease-in-out;
+}
+/* icons */
+.icon-container ul{
+	display:flex;	
+	flex-flow:row nowrap;
+}
 
+.icon-container ul li{
+	list-style: none;
+	margin: 0 15px;
+}
+
+.icon-container ul li .fa{
+	font-size:30px;
+	line-height:60px;
+	transition:0.6s;
+	color:#000;
+}
+
+.icon-container ul li a{
+	position:relative;
+	display:block;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	background-color:#fff;
+	text-align:center;
+	transition:0.5s;
+	box-shadow:0 5px 4px rgba(0,0,0,0.5);
+}
+
+.icon-container ul li a:hover{
+	transform: translate(0,-20px);
+}
+
+.icon-container ul li .fa:hover{
+	color:#fff;
+}
+.icon-container ul li:nth-child(1) a:hover{
+	background-color:#211f1f;
+}
+.icon-container ul li:nth-child(2) a:hover{
+	background-color: #007bb5;
+}
+.icon-container ul li:nth-child(3) a:hover{
+	background-color:#3b5998;
+}
+.icon-container ul li:nth-child(4) a:hover{
+	background-color:#c32aa3;
+}
+
+@media screen and (max-width: 768px){
+	body{
+		font-size:10px;
+	}
+	.overlay{
+		width:100vh;	/* bingo */
+		font-family:'Montserrat';
+	}
+}
