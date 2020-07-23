@@ -35,6 +35,45 @@ function btnscroll(){
 };
 
 // nav bar style change
+function navScroll(){
+	let mainNavLinks = document.querySelectorAll("nav ul li a");
+	let mainSections = document.querySelectorAll(".overlay");
+
+	let lastId;
+	let cur = [];
+	
+	window.addEventListener("scroll", event => {
+		let fromTop = window.scrollY;
+		mainNavLinks.forEach(link => {
+			let section = document.querySelector(link.hash);
+
+			if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop){
+				link.classList.add("current");
+			}
+			else{
+				link.classList.remove("current");
+			}
+			
+		});
+	});
+};
+
+// downbtn scroll
+function downbtnScroll(){
+	const downbtn = document.querySelector("#downbtn");
+	const scrollMarker = document.querySelector("#About");
+	const targetTop = scrollMarker.offsetHeight;
+	downbtn.addEventListener("click", function(){
+		window.scrollTo({
+			top:targetTop,
+			left:0,
+			behavior:"smooth"
+		});
+	});
+};
+
 
 navSlide();
 btnscroll();
+navScroll();
+downbtnScroll();

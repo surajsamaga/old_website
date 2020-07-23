@@ -1,4 +1,6 @@
-
+html{
+	scroll-behavior: smooth;
+}
 *{
 	margin: 0px;
 	padding: 0px;
@@ -12,7 +14,7 @@ body{
 .overlay{
 	font-family:'Montserrat';
 	padding-top:1em;
-	padding-bottom-1em;
+	padding-bottom:1em;
 	}
 /* Navigation Bar */
 
@@ -25,7 +27,7 @@ nav{
 	flex-flow: row nowrap;
 	justify-content: space-around;
 	min-height: 6vh;
-	background-color: rgb(225,225,225);
+	background-color: rgb(235,235,235);
 	font-family: "Ubuntu";
 }
 /* name container */
@@ -33,7 +35,9 @@ nav{
 	color: rgb(50,50,50);
 	text-transform: uppercase;
 	letter-spacing: 0.25em;
-	font-size: 1.25em;
+	text-align:center;
+	padding-top:0.5em;
+	font-size: 1.5em;
 }
 /* nav items <ul> */
 .nav-content{
@@ -51,7 +55,7 @@ nav{
 	align-items: stretch;
 }
 
-.nav-content a{
+.nav-content li a{
 	color: rgb(50,50,50);
 	text-decoration: none;
 	letter-spacing: 0.15625em;
@@ -59,11 +63,13 @@ nav{
 	display: block;
 	text-align:center;
 	text-transform:uppercase;
-	transition: all 0.3s ease-in-out;
 }
 .nav-content li a:hover{
 	color: red;
 	font-weight:800;
+}
+.nav-content li a.current{
+	color:red;
 }
 
 /* burger for toggling nav bar */
@@ -97,7 +103,7 @@ nav{
 		right: 0px;
 		height:92vh;
 		top: 6vh;
-		background-color: rgb(225,225,225);
+		background-color: rgb(235,235,235);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -113,6 +119,7 @@ nav{
 		display: block;
 		cursor: pointer;
 	}
+
 }
 
 .nav-active{
@@ -157,21 +164,39 @@ nav{
 	color:#ffffff;
 	outline:none;
 	border:none;
+	transition:transform 0.3s;
 }
 
 #topbtn:hover{
 	background:#ff0000;
+	transform:scale(1.2);
 }
 #topbtn:active{
 	background:#ae1e2c;
 }
-
+#downbtn{
+	width:4em;
+	height:4em;
+	border-radius:50%;
+	cursor:pointer;
+	background:#FFFFFF;
+	box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	color:#000000;
+	outline:none;
+	border:none;
+	transition:transform 0.3s;
+}
+#downbtn:hover{
+	background: rgb(200,200,2000);
+	transform:scale(1.25);
+}
 /* Timetable */
 #timetable{
 	display:flex;
 	flex-flow:column wrap;
 	justify-content:space-between;
 	align-items:center;
+	padding-bottom:1em;
 }
 #timetable th{
 	text-align:center;
@@ -183,6 +208,9 @@ nav{
 	margin-left: auto;
   	margin-right: auto;
 	width:75%;
+	height:60%;
+	padding-top:2em;
+	padding-bottom:1em;
 }
 .break{
 	vertical-align:top;
@@ -289,8 +317,8 @@ nav{
 	padding-bottom:2em;
 }
 
-#Contact p{
-	font-family:'Montserrat';
+#Contact .content-child{
+	width:50%;
 }
 
 .form-container{
@@ -324,7 +352,7 @@ nav{
 
 .flexform li label{
 	padding: 20px;
-  	font-weight: 300;
+  	font-weight: 400;
   	letter-spacing: .09em;
   	text-transform: uppercase;
 }
@@ -358,12 +386,17 @@ nav{
 	color:#333;
 	transition: all 0.3s ease-in-out;
 }
+
 /* icons */
+.icon-container{
+	padding-top:1em;
+	padding-bottom:2em;
+}
+
 .icon-container ul{
 	display:flex;	
 	flex-flow:row nowrap;
 }
-
 .icon-container ul li{
 	list-style: none;
 	margin: 0 15px;
@@ -406,6 +439,12 @@ nav{
 }
 .icon-container ul li:nth-child(4) a:hover{
 	background-color:#c32aa3;
+}
+
+#footer{
+	padding-top:1em;
+	padding-bottom:1em;
+	text-align:center;
 }
 
 @media screen and (max-width: 768px){
