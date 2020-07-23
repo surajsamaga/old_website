@@ -207,6 +207,7 @@ nav{
 .tablecontent{
 	margin-left: auto;
   	margin-right: auto;
+	align-self:center;
 	width:75%;
 	height:60%;
 	padding-top:2em;
@@ -455,4 +456,5 @@ nav{
 		width:100vh;	/* bingo */
 		font-family:'Montserrat';
 	}
+
 }
