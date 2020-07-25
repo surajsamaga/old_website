@@ -46,6 +46,7 @@ nav{
 	justify-content: space-around;
 	flex-flow: row nowrap;
 	list-style: none;
+	font-size:1.25em;
 }
 
 .nav-content li{
@@ -60,17 +61,26 @@ nav{
 	text-decoration: none;
 	letter-spacing: 0.15625em;
 	font-weight: bold;
-	display: block;
+	display: flex;
+	flex-flow: row nowrap;
 	text-align:center;
 	text-transform:uppercase;
+	padding-top:1em;
 }
+/*
+.nav-content li a i{
+	padding-top:0.75em;
+	padding-bottom:0.75em;
+}
+*/
 .nav-content li a:hover{
 	color: red;
 	font-weight:800;
 }
+
 .nav-content li a.current{
 	color:red;
-}
+1}
 
 /* burger for toggling nav bar */
 .burger{
@@ -175,6 +185,7 @@ nav{
 	background:#ae1e2c;
 }
 #downbtn{
+	margin-top:2em;
 	width:4em;
 	height:4em;
 	border-radius:50%;
@@ -238,7 +249,7 @@ nav{
 	display:flex;
 	flex-flow:column wrap;
 	justify-content: center;
-	align-items:center
+	align-items:center;
 }
 
 .headings h2{
@@ -253,23 +264,23 @@ nav{
 	padding-top:1em;
 	padding-bottom:1em;
 }
-.quote{
-	height: 8em;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-	opacity:0.75;
-}
-.quote p{
-	margin:0;
-	font-family: 'Montserrat';
-	font-size: 2.125em;
-	text-align: center;
-}
 
-/* About */
-#About{
+#home-summary{
+	align-self:center;
+	width:60%;
 }
+#home-summary p{
+	text-align: center;
+	font-size:1.5em;
+	font-family:'Montserrat';
+	font-weight:400;
+}
+#home-summary h3{
+	text-align: center;
+	font-weight:600;
+}
+/* About */
+
 .content-container{
 	min-height:120vh;
 	display:flex;
@@ -284,15 +295,14 @@ nav{
 	padding-top:1em;
 	padding-bottom:1em;
 }
-.content-child h3{
+.content-child h3, #home-summary h3{
 	font-size:2em;
-	font-weight:500;
 	font-family: 'Ubuntu';
 	font-weight:550;
 	text-transform:uppercase;
 }
 .content-child p{
-	font-size:1.5em;
+	font-size: 1.25em;
 	font-family:'Montserrat';
 	font-weight:400;
 }
@@ -450,7 +460,7 @@ nav{
 
 @media screen and (max-width: 768px){
 	body{
-		font-size:10px;
+		font-size:12px;
 	}
 	.overlay{
 		width:100vh;	/* bingo */
