@@ -470,4 +470,8 @@ nav{
 		width:100vh;
 		font-family:'Montserrat';
 	}
+	/*hack for mobile zoom */
+	html{
+		zoom:0.6;
+	}
 }
