@@ -270,10 +270,11 @@ nav{
 
 #home-summary{
 	align-self:center;
-	width:50%;
+	width:80%;
 }
+
 #home-summary p{
-	text-align: center;
+	text-align:center;
 	font-size:1.5em;
 	font-family:'Montserrat';
 	font-weight:400;
@@ -304,6 +305,8 @@ nav{
 	font-family: 'Ubuntu';
 	font-weight:550;
 	text-transform:uppercase;
+	padding-top:1em;
+	padding-bottom:1em;
 }
 .content-child p{
 	font-size: 1.25em;
@@ -314,10 +317,11 @@ nav{
 	color:red;
 }
 #content-activities{
-	min-height:80vh;
+/*	min-height:80vh;*/
 	display:flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items:center;
+    align-content: center;
     justify-content:space-between;
 }
 /* ---------------------------------------------------------------------------------------------------------------------------- */
@@ -464,14 +468,30 @@ nav{
 
 @media screen and (max-width: 768px){
 	body{
-		font-size:12px;
+		font-size:14px;
 	}
 	.overlay{
-		width:100vh;
+		/*width:100vh;*/
 		font-family:'Montserrat';
 	}
 	/*hack for mobile zoom */
 	html{
-		zoom:0.6;
+		zoom: 0.55;
+	}
+	.content-child{
+		align-self:center;
+		text-align:center;
+	}
+	.headings h2{
+		font-size:3.3em;
+	}
+	.content-child h3{
+		font-size:2.3em;
+	}
+	.content-child p{
+		font-size:1.4em;
+	}
+	#Home{
+		height:100vh;
 	}
 }
