@@ -40,12 +40,12 @@ nav{
 	letter-spacing: 0.25em;
 	text-align:center;
 	padding-top:0.5em;
-	font-size: 1.5em;
+	font-size: 1.35em;
 }
 /* nav items <ul> */
 .nav-content{
 	display:flex;
-	width: 50%;
+	width: 65%;
 	justify-content: space-around;
 	flex-flow: row nowrap;
 	list-style: none;
@@ -100,11 +100,11 @@ nav{
 }
 
 /* small hack */
-@media screen and (max-width: 1200px){
+/*@media screen and (max-width: 1200px){
 	.nav-content{
 		width: 70%;
 	}
-}
+}*/
 
 /* for mobile devices */
 @media screen and (max-width: 768px){
@@ -275,7 +275,7 @@ nav{
 
 #home-summary p{
 	text-align:center;
-	font-size:1.5em;
+	font-size:1.4em;
 	font-family:'Montserrat';
 	font-weight:400;
 }
@@ -467,9 +467,6 @@ nav{
 }
 
 @media screen and (max-width: 768px){
-	body{
-		font-size:14px;
-	}
 	.overlay{
 		/*width:100vh;*/
 		font-family:'Montserrat';
