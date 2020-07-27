@@ -481,6 +481,7 @@ nav{
 	.content-child{
 		align-self:center;
 		text-align:center;
+        line-height:2em;
 	}
 	.headings h2{
 		font-size:3.3em;
@@ -489,7 +490,7 @@ nav{
 		font-size:2.3em;
 	}
 	.content-child p{
-		font-size:1.4em;
+		font-size:1.3em;
 	}
 	#Home{
 		height:100vh;
