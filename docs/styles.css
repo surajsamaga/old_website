@@ -1,3 +1,5 @@
+/*Yesssssss!! Issues with timetable and navbar overflowing. Hence causing issues. Shite!*/
+
 html{
 	scroll-behavior: smooth;
 }
@@ -7,169 +9,183 @@ html{
 	box-sizing: border-box;
 }
 a{
-	color:#ffbb33;
+	/*color:#ffbb33;*/
 }
 body{
-	background:black;
-	color:white;
+	background: #f0fff0;
+	color:black;
 	font-size:16px;
+	font-family:'Montserrat';
 }
 .overlay{
-	font-family:'Montserrat';
 	padding-top:1em;
 	padding-bottom:1em;
-	}
+}
 /* Navigation Bar */
 
-/* nav container */
 nav{
+	height:7vh;
+	background: #5b78c7;
+	display: flex;
+	justify-content: space-around;
 	position:fixed;
-	top:0;
-	min-width:100%;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
-	min-height: 6vh;
-	background-color: rgb(235,235,235);
-	font-family: "Ubuntu";
+	width:100vw;
 }
-/* name container */
+
 .logo{
-	color: rgb(50,50,50);
-	text-transform: uppercase;
-	letter-spacing: 0.25em;
-	text-align:center;
-	padding-top:0.5em;
-	font-size: 1.35em;
-}
-/* nav items <ul> */
-.nav-content{
 	display:flex;
-	width: 65%;
-	justify-content: space-around;
 	flex-flow: row nowrap;
-	list-style: none;
-	font-size:1.25em;
+	width:30%;
+	height:100%;
+	align-items: center;
+	white-space: nowrap;
 }
 
-.nav-content li{
-	list-style: none;
-	align-self:stretch;
-	display:flex;
-	align-items: stretch;
+.logo h3{
+	text-align:center;
+	margin:auto;
+	color: white;
+	font-size:1.45em;
 }
 
-.nav-content li a{
-	color: rgb(50,50,50);
-	text-decoration: none;
-	letter-spacing: 0.15625em;
-	font-weight: bold;
+.nav-links{
 	display: flex;
-	flex-flow: row nowrap;
-	text-align:center;
-	text-transform:uppercase;
-	padding-top:1em;
-}
-/*
-.nav-content li a i{
-	padding-top:0.75em;
-	padding-bottom:0.75em;
-}
-*/
-.nav-content li a:hover{
-	color: red;
-	font-weight:800;
+	list-style: none;
+	width:70%;
+	height:100%;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1.25em;
 }
 
-.nav-content li a.current{
-	color:red;
-1}
-
-/* burger for toggling nav bar */
-.burger{
-	display: none;
-	align-self:center;
+.nav-links li a{
+	color:white;
+	text-decoration: none;
+}
+.nav-links li a:hover{
+	color: #ffff00;
+	font-weight: 600;
 }
 
-.burger div{
-	width: 1.5625em;
-	height: 0.1875em;
-	background-color: rgb(50,50,50);
-	margin: 0.3125em;
-	transition all: 0.3s ease;
-}
-
-/* small hack */
-/*@media screen and (max-width: 1200px){
-	.nav-content{
-		width: 70%;
-	}
-}*/
-
-/* for mobile devices */
 @media screen and (max-width: 768px){
 	body{
-		overflow-x: hidden;
+		font-size: 12.8px;
 	}
-	.nav-content{
-		position: absolute;
-		right: 0px;
-		height:92vh;
-		top: 6vh;
-		background-color: rgb(235,235,235);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		align-self:stretch;
-		width: 35%;
-		transform: translateX(100%);
-		transition: transform 0.5s ease-in; 
+	
+	.logo{width:35%;}
+
+	.line{
+		width: 30px;
+		height: 3px;
+		background: white;
+		margin: 5px;
 	}
-	.nav-content li{
-		opacity: 0;
+
+	nav{
+		position: fixed;
 	}
-	.burger{
-		display: block;
+
+	.hamburger{
+		right:5%;
+		align-self:center;
+		position: fixed;
 		cursor: pointer;
+		transform: translate(-5%, -5%);
+		z-index:2;
+	}
+	.hamburger .line{
+		transition: all 0.5s ease-in-out;
+	}
+	
+	/*animation*/
+	.hamburger.open .line{
+		transform: translateX(-20px);
+		transition: all 0.5s ease-in-out;
+	}
+	.hamburger.open #line2{
+		background: transparent;
+	}
+	.hamburger.open #line1{
+		transform: rotate(45deg) translate(0px, 10.6px);
+	}
+	.hamburger.open #line3{
+		transform: rotate(-45deg) translate(0px, -10.6px);
 	}
 
-}
-
-.nav-active{
-	transform: translateX(0%);
-}
-
-/* animation for nav-items in mobile devices */
-@keyframes navFade{
-	from{
+	.nav-links{
+		position:fixed;
+		background: #5b78c7;
+		height:100vh;
+		width:100vw;
+		flex-direction: column;
+		clip-path: circle(100px at 115% -15%);
+		-webkit-clip-path: circle(100px at 115% -15%);
+		transition: all 1s ease-out;
+		pointer-events: none;
+		opacity:0.9;
+	}
+	
+	.nav-links li{
 		opacity: 0;
-		transform: translateX(3.125em);
 	}
-	to{
+
+	.nav-links li.fade{
 		opacity: 1;
-		transform: translateX(0px);
 	}
+
+	.nav-links li a{
+		font-size: 1em;
+	}
+
+	.nav-links li:nth-child(1){
+		transition: all 0.5s ease 0.2s;
+	}
+	.nav-links li:nth-child(2){
+		transition: all 0.5s ease 0.4s;
+	}
+	.nav-links li:nth-child(3){
+		transition: all 0.5s ease 0.6s;
+	}
+	.nav-links li:nth-child(4){
+		transition: all 0.5s ease 0.8s;
+	}
+	.nav-links li:nth-child(5){
+		transition: all 0.5s ease 1s;
+	}
+
+	.nav-links.open{
+		clip-path: circle(1024px at 115% -15%);
+		-webkit-clip-path: circle(1024px at 115% -15%);
+		pointer-events: all;
+	}
+
+	/*video responsive */
+	.videowrapper{
+		position: relative;
+		width:100%;
+		padding-bottom: 56.25%;
+		height:0;
+	}
+	.videowrapper iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
 }
 
-/* animation for burger on click */
-.clickburger .line1{
-	transform: rotate(-45deg) translate (-0.3125em, 0.375em);
-	opacity:0;
-}
-
-.clickburger .line2{
-	transform: rotate(-45deg);
-}
-.clickburger .line3{
-	transform: rotate(45deg) translate(-0.3125em, -0.375em);
+.videowrapper{
+	padding-top:2em;
 }
 /* Main css */
 #topbtn{
 	position:fixed;
 	right:25px;
 	bottom:25px;
-	width:55px;
-	height:55px;
+	width:3.75em;
+	height:3.75em;
 	border-radius:50%;
 	cursor:pointer;
 	background:#e62739;
@@ -204,51 +220,12 @@ nav{
 	background: rgb(200,200,2000);
 	transform:scale(1.25);
 }
-/* Timetable */
-#timetable{
-	display:flex;
-	flex-flow:column wrap;
-	justify-content:space-between;
-	align-items:center;
-	padding-bottom:1em;
-}
-#timetable th{
-	text-align:center;
-}
-#timetable th, td{
-	padding:15px;
-}
-.tablecontent{
-	margin-left: auto;
-  	margin-right: auto;
-	align-self:center;
-	min-width:60%;
-	height:60%;
-	padding-top:2em;
-	padding-bottom:1em;
-}
-.break{
-	vertical-align:top;
-}
-.t-head, .lhs{
-	background:#008080;
-}
-.break, #corner{
-	background:#004040;
-}
-.tablecontent td{
-}
-#timetable table, th, td{
-	border:1px solid white;
-	border-collapse:collapse;
-	text-align:center;
-}
+
 
 /* Home */
 #Home{
-	margin-top:6vh;
 	margin:auto;
-	height: 100vh;
+	height: 93vh;
 	display:flex;
 	flex-flow:column nowrap;
 	justify-content: center;
@@ -257,25 +234,25 @@ nav{
 
 .headings h2{
 	font-weight:700;
-	color:white;
-        text-align: center;
-	font-size:3em;
-        letter-spacing: 0.45vw;
-        text-transform: uppercase;
-        font-family: 'Ubuntu';
-        text-align: center;
+	color:black;
+	text-align: center;
+	font-size:2.5em;
+    letter-spacing: 0.45vw;
+    text-transform: uppercase;
+    font-family: 'Ubuntu';
+    text-align: center;
 	padding-top:1em;
 	padding-bottom:1em;
 }
 
 #home-summary{
 	align-self:center;
-	width:80%;
+	width:60%;
 }
 
 #home-summary p{
-	text-align:center;
-	font-size:1.4em;
+	/*text-align:center;*/
+	font-size:1.25em;
 	font-family:'Montserrat';
 	font-weight:400;
 }
@@ -316,7 +293,7 @@ nav{
 .utd{
 	color:red;
 }
-#content-activities{
+#content-projects{
 /*	min-height:80vh;*/
 	display:flex;
     flex-flow: column nowrap;
@@ -324,6 +301,7 @@ nav{
     align-content: center;
     justify-content:space-between;
 }
+
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 /* Contact form */
 
@@ -384,7 +362,6 @@ nav{
 }
 .flexform li input, .flexform li textarea{
 	padding: 1em;
-  	border: none;
 	font-size:0.9375em;
 	font-family:'Montserrat';
 }
@@ -401,8 +378,7 @@ nav{
 	cursor:pointer;
 }
 .flexform li button:hover{
-	background:#f2f2f2;
-	color:#333;
+	background:#dc143c;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -464,32 +440,4 @@ nav{
 	padding-top:1em;
 	padding-bottom:1em;
 	text-align:center;
-}
-
-@media screen and (max-width: 768px){
-	.overlay{
-		/*width:100vh;*/
-		font-family:'Montserrat';
-	}
-	/*hack for mobile zoom */
-	html{
-		zoom: 0.55;
-	}
-	.content-child{
-		align-self:center;
-		text-align:center;
-        line-height:2em;
-	}
-	.headings h2{
-		font-size:3.3em;
-	}
-	.content-child h3{
-		font-size:2.3em;
-	}
-	.content-child p{
-		font-size:1.3em;
-	}
-	#Home{
-		height:100vh;
-	}
 }

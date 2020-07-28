@@ -14,59 +14,28 @@
 </head>
 
 <body>
-
+	<!-- navigation bar -->
 	<nav>
-		<div class = "logo">
-			<h3> SURAJ SAMAGA </h3>
+		<div class="hamburger">
+			<div class="line" id="line1"></div>
+			<div class="line" id="line2"></div>
+			<div class="line" id="line3"></div>
 		</div>
-		<ul class="nav-content">
-			<li>
-				<!-- quick fix <br> -->
-				<a href="#Home">
-					<i class="material-icons">home</i>
-					Home
-				</a>
-			</li>
-			<li>
-				<a href="#About">
-					<i class="material-icons">person</i>
-					About
-				</a>
-			</li>
-            <li>
-				<a href="#Activities">
-					<i class="material-icons">work</i>
-					Activities
-				</a>
-				
-			</li>
-			<li>
-				<a href="#timetable">
-					<i class="material-icons">timer</i>
-					Timetable
-				</a>
-			</li>
-			<li>
-				<a href="#Contact">
-					<i class="material-icons">call</i>
-					Contact
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i class="material-icons">text_snippet</i>
-					Resume
-			</a>
-			</li>
-                        
+		<div class="logo">
+			<h3>
+			SURAJ SAMAGA
+			</h3>
+		</div>
+		<ul class="nav-links">
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#About">About</a></li>
+			<li><a href="#Projects">Projects</a></li>
+<!-- 			<li><a href="#Hobbies">Hobbies</a></li> -->
+<!-- remember to change width in css -->
+			<li><a href="#Contact">Contact</a></li>
 		</ul>
-			<!-- for mobile devices -->
-		<div class="burger">
-			<div class = "line1"></div>
-                        <div class = "line2"></div>
-                        <div class = "line3"></div>
-		</div>
 	</nav>
+
 	<!-- go back to top button -->
 
 	<button id="topbtn" title="Go back up">
@@ -87,7 +56,7 @@
 			</p>
 			<br>
 			<p>
-				Feel connected? Reach out to me <a href="#Contact">here</a>
+				Feel connected? Reach out to me <a href="#Contact">here</a>.
 				<!-- could add button here -->
 			</p>
 		</div>
@@ -109,13 +78,12 @@
 			<div class="content-child">
 				<h3> Interests </h3>
 				<p>
-					Being a student of a technical institute, I have a natural affinity towards problem solving and analytical thinking.
+					My affinity towards problem-solving and analytical thinking helps me keep up with life at IIT-B.
 					Coding excites me -the thrill of imagining something in my mind and realising it straight with my hands is something that I cherish. 
 				</p>
 				<br>
 				<p>
-					Academically, math is my favourite subject, for its elegance and very diverse applications. I find calculus very stimulating as it always feeds my hungry buds. I recently dabbled into the field of Deep Learning, and it was an eye-opening experience - what can be achieved through some data and algorithms; the limit is only our imagination!
-					Have a glimpse into this project, and others <a href="Activities">here</a>. 
+					Academically, math is my favourite subject, for its elegance and very diverse applications. In particular, I enjoy calculus the most. I recently dabbled into the field of Deep Learning, and it was an eye-opening experience. The eventualities of AI are endless, limited only by our imagination! Have a glimpse into this project, and others <a href="#Projects">here</a>. 
 				</p>	
 			</div>
 			
@@ -138,7 +106,7 @@
 				</p>
 				<br>
 				<p>
-					I tried my luck at the world’s oldest endurance cycling event, Brevets De Randonneur Mondiaux (BRM)s organised under the banner <a target="_blank" href="http://www.audax-club-parisien.com/EN/">Audax Club Parisian</a>. Riding alongside my father, I earned my first RANDONNEUR title, at the at the age of 15, for having completed 200km ride within the specified time.
+					I tried my luck at the world’s oldest endurance cycling event, Brevets De Randonneur Mondiaux (BRM)s organised under the banner <a target="_blank" href="http://www.audax-club-parisien.com/EN/">Audax Club Parisian</a>. Riding alongside my father, I earned my first RANDONNEUR title, at the age of 15, by completing a 200km ride within the specified time.
 					<!-- YELLOW JERSEY /CYCLING TOUR PICS/TRAINER   -->
 				</p>
 				<br>
@@ -147,19 +115,17 @@
 				</p>
 
 			</div>
-			<div class="content-child" id="video-container">
-				<div class="iframe-container">
-				<iframe width="600" height="400" src="https://www.youtube.com/embed/3KuL-DIN5J4?start=13" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
+			<div class="videowrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/3KuL-DIN5J4?start=13" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
 	
 	<!-- ################################################################ -->
-	<div id="Activities" class="overlay">
-		<div class="content-container" id="content-activities">
+	<div id="Projects" class="overlay">
+		<div class="content-container" id="content-projects">
 			<div class="headings">
-                		<h2> Activities </h2>
+                		<h2> Projects </h2>
                 	</div>
 
 			<div class="content-child">
@@ -186,83 +152,6 @@
 			</div>
 
 		</div>
-	</div>
-
-	<!-- My Timetable -->
-	<div id="timetable" class="overlay">
-		<!-- replace this with photo gallery -->
-		<div class="headings">
-			<h2> My Timetable </h2>
-		</div>
-		<div class="content-child">
-			<p> Here is what a typical day in my life at college looks like:</p>
-			<p> Hover over each cell for more information </p>
-			<br>
-		</div>
-		<table class="tablecontent">
-			<tr>
-				<th id="corner">Time/Day</th>
-				<th class="t-head">8:30-9:25</th>
-				<th class="t-head">9:30-10:25</th>
-				<th class="t-head" colspan="2">10:35-11:30</th>
-				<th class="t-head">11:35-12:30</th>
-				<th rowspan="6" class="break">Lunch</th>
-				<th class="t-head" colspan="2">14:00-15:25</th>
-				<th class="t-head" colspan="2">15:30-16:55</th>
-				<th class="break" rowspan="6">Tea</th>
-				<th class="t-head">17:30-18:55</th>
-				<th class="t-head">19:00-20:25</th>
-			</tr>
-			<tr>
-				<th class="lhs">Monday</th>
-				<td title="">HS200</td>
-				<td title=""></td>
-				<td colspan="2" title=""></td>
-				<td title=""></td>
-				<td colspan="4" title=""></td>
-				<td title=""></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th class="lhs">Tuesday</th>
-				<td title=""></td>
-				<td title="">HS200</td>
-				<td colspan="2" title=""></td>
-				<td title=""></td>
-				<td colspan="4" title=""></td>
-				<td title=""></td>
-				<td title=""></td>
-			</tr>
-			<tr>
-				<th class="lhs">Wednesday</th>
-				<td title=""></td>
-				<td colspan="2" title=""></td>
-				<td colspan="2" title=""></td>
-				<td colspan="4" title=""></td>
-				<td title=""></td>
-				<td title=""></td>
-			</tr>
-			<tr>
-				<th class="lhs">Thursday</th>
-				<td title=""></td>
-				<td title=""></td>
-				<td colspan="2" title="">HS200</td>
-				<td title=""></td>
-				<td colspan="4" title=""></td>
-				<td title=""></td>
-				<td title=""></td>
-			</tr>
-			<tr>
-				<th class="lhs">Friday</th>
-				<td title=""></td>
-				<td colspan="2" title=""></td>
-				<td colspan="2" title=""></td>
-				<td colspan="4" title=""></td>
-				<td title=""></td>
-				<td title=""></td>
-			</tr>
-
-		</table>
 	</div>
 
 	<!-- ############################################################### -->
