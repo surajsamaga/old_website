@@ -71,7 +71,9 @@ nav{
 	body{
 		font-size: 12.8px;
 	}
-	
+	.content-child p, #home-summary p{
+		line-height: 2em;
+	}
 	.logo{width:35%;}
 
 	.line{
@@ -174,6 +176,28 @@ nav{
 		height: 100%;
 	}
 
+	#Home #home_outer{
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		align-content: center;
+		justify-content: space-between;
+	}
+
+	#home-heading{
+		padding-top: 2em;
+	}
+	#home_outer #image-container #profile_pic{
+		width: 50%;
+		height: 60%;
+	}
+	#image-container{
+		margin-bottom: 5vh;
+	}
+	#home-summary{
+		width:90%;
+	}
+
 }
 
 .videowrapper{
@@ -204,7 +228,7 @@ nav{
 	background:#ae1e2c;
 }
 #downbtn{
-	margin-top:4em;
+	margin-bottom:2em;
 	width:4em;
 	height:4em;
 	border-radius:50%;
@@ -217,20 +241,54 @@ nav{
 	transition:transform 0.3s;
 }
 #downbtn:hover{
-	background: rgb(200,200,2000);
+	color: rgb(200, 200, 200);
+	background: rgb(50, 50, 50);
 	transform:scale(1.25);
 }
 
 
 /* Home */
 #Home{
+	min-height: 100vh;
 	margin:auto;
-	height: 93vh;
 	display:flex;
-	flex-flow:column nowrap;
+	flex-flow: column nowrap;
 	justify-content: center;
 	align-items:center;
 }
+
+#home-heading h2{
+	letter-spacing: 0.05vw;
+	font-weight: 550;
+}
+
+#home_outer{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+#home-summary p{
+	/*text-align:center;*/
+	font-size:1.25em;
+	font-family:'Montserrat';
+	font-weight:400;
+}
+
+#image-container{
+	display-flex;
+}
+#profile_pic{
+	width:50%;
+	height:75%;
+	align-self:center;
+	margin: auto;
+	display: block;	
+}
+
+/* About */
 
 .headings h2{
 	font-weight:700;
@@ -241,27 +299,9 @@ nav{
     text-transform: uppercase;
     font-family: 'Ubuntu';
     text-align: center;
-	padding-top:1em;
+    padding-top: 1em;
 	padding-bottom:1em;
 }
-
-#home-summary{
-	align-self:center;
-	width:60%;
-}
-
-#home-summary p{
-	/*text-align:center;*/
-	font-size:1.25em;
-	font-family:'Montserrat';
-	font-weight:400;
-}
-#home-summary h3{
-	text-align: center;
-	font-weight:700;
-	padding-bottom:1em;
-}
-/* About */
 
 .content-container{
 	/*min-height:120vh;*/
@@ -277,7 +317,7 @@ nav{
 	padding-top:1em;
 	padding-bottom:1em;
 }
-.content-child h3, #home-summary h3{
+.content-child h3{
 	font-size:2em;
 	font-family: 'Ubuntu';
 	font-weight:550;
