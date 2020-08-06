@@ -8,9 +8,7 @@ html{
 	padding: 0px;
 	box-sizing: border-box;
 }
-a{
-	/*color:#ffbb33;*/
-}
+
 body{
 	background: #f0fff0;
 	color:black;
@@ -35,7 +33,7 @@ nav{
 .logo{
 	display:flex;
 	flex-flow: row nowrap;
-	width:30%;
+	width:25%;
 	height:100%;
 	align-items: center;
 	white-space: nowrap;
@@ -51,7 +49,7 @@ nav{
 .nav-links{
 	display: flex;
 	list-style: none;
-	width:70%;
+	width:75%;
 	height:100%;
 	justify-content: space-around;
 	align-items: center;
@@ -71,7 +69,7 @@ nav{
 	body{
 		font-size: 12.8px;
 	}
-	.content-child p, #home-summary p{
+	.content-child p, #home-summary p, #table-para p{
 		line-height: 2em;
 	}
 	.logo{width:35%;}
@@ -197,12 +195,18 @@ nav{
 	#home-summary{
 		width:90%;
 	}
+	.table-inner{
+		width: 100%;
+		margin: none;
+	}
 
 }
+/*end of media */
 
 .videowrapper{
 	padding-top:2em;
 }
+
 /* Main css */
 #topbtn{
 	position:fixed;
@@ -340,6 +344,44 @@ nav{
     align-items:center;
     align-content: center;
     justify-content:space-between;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*Timetable*/
+#table-para{
+	font-size: 1.25em;
+	text-align:center;
+	margin:auto;
+	padding-bottom: 1em;
+}
+#table-holder{
+	overflow-x: auto;
+}
+
+.table-inner{
+	font-size: 1.2em;
+	border-collapse: collapse;
+	width: 90%;
+	margin: auto;
+	height: 35vh;
+}
+
+.table-inner, .table-header, .table-break, td{
+	border: 1px solid black;
+    text-align: center;
+}
+
+.table-inner td, .table-inner th{
+    padding: 0.7em;
+}
+.table-lhs{
+	font-weight: 700;
+}
+.table-inner tr td{
+}
+.table-header, .table-break{
+	background-color: #5b78c7;
+	color: white;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
