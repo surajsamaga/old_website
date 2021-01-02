@@ -70,7 +70,7 @@ nav{
 		font-size: 12.8px;
 	}
 	.content-child p, #home-summary p, #table-para p{
-		line-height: 2em;
+		line-height: 1.7em;
 	}
 	.logo{width:35%;}
 
@@ -328,6 +328,12 @@ nav{
 	text-transform:uppercase;
 	padding-top:1em;
 	padding-bottom:1em;
+}
+.content-child h4{
+	font-size:1.2em;
+	font-family: 'Ubuntu';
+	font-weight:450;
+	text-transform:uppercase;
 }
 .content-child p{
 	font-size: 1.25em;
